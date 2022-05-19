@@ -29,7 +29,7 @@ documentation = "https://https://github.com/shenek/poetry-babel-plugin/README.md
 [tool.poetry.dependencies]
 python = "^3.8"
 
-babel = "2.10.1"
+babel = "^2.10.1"
 poetry = {version = "1.2.0b1", allow-prereleases = true}
 
 [tool.poetry.dev-dependencies]
@@ -42,3 +42,6 @@ isort = "^5.10.1"
 [tool.poetry.plugins]
 
 [tool.poetry.plugins."poetry.plugin"]
+
+[tool.poetry.plugins."poetry.application.plugin"]
+babel = "poetry_babel_plugin.plugin:BabelPlugin"

@@ -4,6 +4,7 @@ __pycache__
 *.pyc
 *.swo
 *.swp
+*.mo
 .mypy_cache/
 venv/
 poetry.lock

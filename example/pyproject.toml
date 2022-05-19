@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "example"
+version = "0.0.0"
+description = ""
+authors = ["Bob"]
+readme = "README.md"
+
+include = [
+	"**/*.mo"
+]
+exclude = [
+	"**/*.pot",
+	"**/*.po",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+babel = "^2.10.1"
+poetry-babel-plugin = "~0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry_babel_plugin.compile]]
+domains = ["messages"]  # default ['messages']
+directory = "example/locale/"  # this depends on you project layout
+fuzzy = false  # skip or not skip fuzzy transtations
+locales = ['de', 'cs'] # if set it limits which locales are compiled

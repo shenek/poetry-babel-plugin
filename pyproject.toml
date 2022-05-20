@@ -10,12 +10,9 @@ target-version = ["py38"]
 line_length = 120
 profile = 'black'
 
-[tool.pytest.ini_options]
-testpaths = "tests/"
-
 [tool.poetry]
 name = "poetry-babel-plugin"
-version = "0.0.0"
+version = "0.1.0"
 description = "Babel plugin for poetry"
 authors = ["Stepan Henek <stepan@henek.name>"]
 license = "MIT"

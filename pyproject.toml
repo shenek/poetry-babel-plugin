@@ -17,11 +17,12 @@ description = "Babel plugin for poetry"
 authors = ["Stepan Henek <stepan@henek.name>"]
 license = "MIT"
 classifiers = [
-	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
 	"Topic :: Software Development :: Localization"
 ]
 keywords = ["poetry", "babel"]
-documentation = "https://https://github.com/shenek/poetry-babel-plugin/README.md"
+documentation = "https://github.com/shenek/poetry-babel-plugin/blob/master/README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"

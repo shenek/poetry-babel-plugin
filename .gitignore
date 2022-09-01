@@ -7,4 +7,5 @@ __pycache__
 *.mo
 .mypy_cache/
 venv/
+dist/
 poetry.lock

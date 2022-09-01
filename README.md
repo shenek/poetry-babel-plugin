@@ -5,9 +5,6 @@ into poetry install/build commands.
 
 For further details see the [example](./example).
 
-## Note
-Note that this plugin requires a newer version of poetry (^1.2) which is not released yet.
-
 ## Installation
 see https://python-poetry.org/docs/plugins/#using-plugins
 

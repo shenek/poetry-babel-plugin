@@ -1,6 +1,5 @@
-import sys
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Iterable, List, Optional, Tuple
 
 from babel.messages.mofile import write_mo
 from babel.messages.pofile import read_po
@@ -53,19 +52,18 @@ class BabelPlugin(ApplicationPlugin):
         else:
             locale_paths = [(locale, dir_path / locale) for locale in locales]
 
-        input: List[Tuple[str, Path, Path]] = []
+        in_paths: List[Tuple[str, Path, Path]] = []
         for locale, locale_path in locale_paths:
             po_path = locale_path / "LC_MESSAGES" / f"{domain}.po"
             if po_path.exists():
                 mo_path = po_path.parent / f"{domain}.mo"
-                input.append((locale, po_path, mo_path))
+                in_paths.append((locale, po_path, mo_path))
 
-        for locale, po_file, mo_file in input:
+        for locale, po_file, mo_file in in_paths:
             io.write(f"Compiling <fg=cyan>{locale}</> locale for <fg=cyan>{domain}</> domain... ")
             with po_file.open() as f:
                 catalog = read_po(f, locale)
 
-            catalog.fuzzy
             errors = list(catalog.check())
 
             with mo_file.open("wb") as f:

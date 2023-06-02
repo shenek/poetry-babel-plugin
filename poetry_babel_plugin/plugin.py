@@ -48,7 +48,7 @@ class BabelPlugin(ApplicationPlugin):
     ):
         if locales is None:
             # Detect locales by listing the directory
-            locale_paths = [(p.name, p) for p in dir_path.glob("*") if p.is_directory()]
+            locale_paths = [(p.name, p) for p in dir_path.glob("*") if p.is_dir()]
         else:
             locale_paths = [(locale, dir_path / locale) for locale in locales]
 

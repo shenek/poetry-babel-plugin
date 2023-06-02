@@ -28,7 +28,7 @@ documentation = "https://github.com/shenek/poetry-babel-plugin/blob/master/READM
 python = "^3.8"
 
 babel = "^2.10.1"
-poetry = "~1.2.0"
+poetry = ">=1.2.0"
 
 [tool.poetry.dev-dependencies]
 black = "22.3.0"
